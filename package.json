@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "mind games",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anna Karzhavina",
-  "license": "ISC",
-  "dependencies": {
-    "make": "^0.8.1"
-  }
+  "license": "ISC"
 }
