@@ -8,7 +8,7 @@ export const welcome = () => {
 console.log(welcome());
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i += 1) {
   const randomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
