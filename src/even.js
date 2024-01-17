@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 console.log('Welcome to the Brain Games!');
 const userName = readlineSync.question('May I have your name?: ');
-export const welcome = () => {
+const welcome = () => {
   return `Hello, ${userName}!`;
 };
 console.log(welcome());
@@ -27,3 +27,5 @@ for (let i = 0; i < 3; i += 1) {
     break;
   }
 }
+
+export default welcome;
