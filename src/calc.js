@@ -14,14 +14,31 @@ const calculatorGame = () => {
       const randomOperation = operation[Math.floor(Math.random() * operation.length)];
       return randomOperation;
     };
+    const sign = randomСomputationОperation();
     const numberOne = randomNumber(1, 100);
     const numberTwo = randomNumber(1, 100);
-    const operand = randomСomputationОperation();
-    const randomExpression = `${numberOne} ${randomСomputationОperation()} ${numberTwo}`;
+    const randomExpression = `${numberOne} ${sign} ${numberTwo}`;
     const question = `Question: ${randomExpression}`;
-    if ()
     console.log(question);
-
+    const answeUser = parseInt(readlineSync.question('Your answer: '));
+      let result;
+      if (sign === '-') {
+        result = numberOne - numberTwo;
+      } else if (sign === '+') {
+        result = numberOne + numberTwo;
+      } else {
+        result = numberOne * numberTwo;
+      }
+    if (result === answeUser) {
+      console.log('Correct!')
+      if (i === 2) {
+        console.log(`Congratulations, ${userName}!`);
+      }
+    } else {
+      console.log(`'${answeUser}' is wrong answer ;(. Correct answer was '${result}'.
+      Let's try again, ${userName}!`)
+      break;
+    }
 }
 };
 
