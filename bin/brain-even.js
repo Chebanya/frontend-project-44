@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-import welcome from '../src/even.js';
+import mindGames from '../src/even.js';
+
+mindGames();
