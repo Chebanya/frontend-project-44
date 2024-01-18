@@ -20,26 +20,26 @@ const calculatorGame = () => {
     const randomExpression = `${numberOne} ${sign} ${numberTwo}`;
     const question = `Question: ${randomExpression}`;
     console.log(question);
-    const answeUser = parseInt(readlineSync.question('Your answer: '));
-      let result;
-      if (sign === '-') {
-        result = numberOne - numberTwo;
-      } else if (sign === '+') {
-        result = numberOne + numberTwo;
-      } else {
-        result = numberOne * numberTwo;
-      }
+    const answeUser = parseInt(readlineSync.question('Your answer: '), 10);
+    let result;
+    if (sign === '-') {
+      result = numberOne - numberTwo;
+    } else if (sign === '+') {
+      result = numberOne + numberTwo;
+    } else {
+      result = numberOne * numberTwo;
+    }
     if (result === answeUser) {
-      console.log('Correct!')
+      console.log('Correct!');
       if (i === 2) {
         console.log(`Congratulations, ${userName}!`);
       }
     } else {
       console.log(`'${answeUser}' is wrong answer ;(. Correct answer was '${result}'.
-      Let's try again, ${userName}!`)
+      Let's try again, ${userName}!`);
       break;
     }
-}
+  }
 };
 
 export default calculatorGame;
