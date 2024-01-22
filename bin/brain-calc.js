@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import randomNumber from '../src/random.js';
-import calculatorGame from '../src/calc.js';
+import { rule, calculatorGame } from '../games/calc.js';
+import fishGames from '../src/index.js';
 
-randomNumber();
-calculatorGame();
+fishGames(rule, calculatorGame);
