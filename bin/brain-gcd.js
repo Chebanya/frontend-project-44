@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { rule, defineNode } from '../games/gcd.js';
 import fishGames from '../src/index.js';
 
