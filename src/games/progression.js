@@ -18,7 +18,7 @@ const arithmeticProgression = () => {
     }
     sum += numberTwo;
   }
-  return [randomExpression, expectedResult.toString()];
+  return [randomExpression.join(' '), expectedResult.toString()];
 };
 
 const arithmeticProgressionGame = () => {
