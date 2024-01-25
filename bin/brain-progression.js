@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { rule, arithmeticProgression } from '../games/progression.js';
-import fishGames from '../src/index.js';
+import arithmeticProgressionGame from '../src/games/progression.js';
 
-fishGames(rule, arithmeticProgression);
+arithmeticProgressionGame();

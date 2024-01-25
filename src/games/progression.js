@@ -1,7 +1,8 @@
-import randomNumber from '../src/random.js';
+import randomNumber from '../random.js';
+import fishGames from '../index.js';
 
-export const rule = 'What number is missing in the progression?';
-export const arithmeticProgression = () => {
+const description = 'What number is missing in the progression?';
+const arithmeticProgression = () => {
   const numberOne = randomNumber(1, 100);
   const numberTwo = randomNumber(1, 100);
   const randomExpression = [];
@@ -17,5 +18,11 @@ export const arithmeticProgression = () => {
     }
     sum += numberTwo;
   }
-  return [randomExpression.join(' '), expectedResult.toString()];
+  return [randomExpression, expectedResult.toString()];
 };
+
+const arithmeticProgressionGame = () => {
+  fishGames(description, arithmeticProgression);
+};
+
+export default arithmeticProgressionGame;

@@ -1,12 +1,13 @@
-import randomNumber from '../src/random.js';
+import randomNumber from '../random.js';
+import fishGames from '../index.js';
 
-export const rule = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const randomСomputationОperation = () => {
   const operation = ['-', '+', '*'];
   const randomOperation = operation[Math.floor(Math.random() * operation.length)];
   return randomOperation;
 };
-export const calculatorGame = () => {
+const calculator = () => {
   const numberOne = randomNumber(1, 100);
   const numberTwo = randomNumber(1, 100);
   const sign = randomСomputationОperation();
@@ -21,3 +22,9 @@ export const calculatorGame = () => {
   const randomExpression = `${numberOne} ${sign} ${numberTwo}`;
   return [randomExpression, expectedResult.toString()];
 };
+
+const calculatorGame = () => {
+  fishGames(description, calculator);
+};
+
+export default calculatorGame;

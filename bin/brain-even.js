@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { rule, parityCheck } from '../games/even.js';
-import fishGames from '../src/index.js';
+import parityGame from '../src/games/even.js';
 
-fishGames(rule, parityCheck);
+parityGame();

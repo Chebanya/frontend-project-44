@@ -1,7 +1,8 @@
-import randomNumber from '../src/random.js';
+import randomNumber from '../random.js';
+import fishGames from '../index.js';
 
-export const rule = 'Find the greatest common divisor of given numbers.';
-export const defineNode = () => {
+const description = 'Find the greatest common divisor of given numbers.';
+const defineNode = () => {
   const numberOne = randomNumber(1, 100);
   const numberTwo = randomNumber(1, 100);
   const randomExpression = `${numberOne} ${numberTwo}`;
@@ -14,3 +15,9 @@ export const defineNode = () => {
   }
   return [randomExpression, expectedResult.toString()];
 };
+
+const gameIdentifyNode = () => {
+  fishGames(description, defineNode);
+};
+
+export default gameIdentifyNode;
