@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import gameIdentifyNode from '../src/games/gcd.js';
+import runGameIdentifyNode from '../src/games/gcd.js';
 
-gameIdentifyNode();
+runGameIdentifyNode();

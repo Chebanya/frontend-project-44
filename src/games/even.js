@@ -8,8 +8,8 @@ const parityCheck = () => {
   return [randomExpression, expectedResult];
 };
 
-const parityGame = () => {
+const runParityGame = () => {
   fishGames(description, parityCheck);
 };
 
-export default parityGame;
+export default runParityGame;
