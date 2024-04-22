@@ -9,7 +9,7 @@ const isTheNumberPrime = (number) => {
       return false;
     }
   }
-  return true;
+  return number !== 1;
 };
 const primeNumber = () => {
   const randomExpression = randomNumber(1, 100);
