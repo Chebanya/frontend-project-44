@@ -2,21 +2,18 @@ import randomNumber from '../random.js';
 import fishGames from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
-const smallestValue = (numberOne, numberTwo) => {
-  let result;
-  const calculatingTheSmallestNumber = numberOne <= numberTwo ? numberOne : numberTwo;
-  for (let i = 1; i <= calculatingTheSmallestNumber; i += 1) {
-    if (numberOne % i === 0 && numberTwo % i === 0) {
-      result = i;
-    }
+const gcd = (numberOne, numberTwo) => {
+  if (numberTwo === 0) {
+    return numberOne;
   }
-  return result;
+  return gcd(numberTwo, numberOne % numberTwo);
 };
+
 const defineNode = () => {
   const numberOne = randomNumber(1, 100);
   const numberTwo = randomNumber(1, 100);
   const randomExpression = `${numberOne} ${numberTwo}`;
-  const expectedResult = smallestValue(numberOne, numberTwo);
+  const expectedResult = gcd(numberOne, numberTwo);
   return [randomExpression, expectedResult.toString()];
 };
 

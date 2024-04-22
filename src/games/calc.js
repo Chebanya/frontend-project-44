@@ -5,12 +5,17 @@ const description = 'What is the result of the expression?';
 const operation = ['-', '+', '*'];
 const calculateExpression = (sign, numberOne, numberTwo) => {
   let result;
-  if (sign === '-') {
-    result = numberOne - numberTwo;
-  } else if (sign === '+') {
-    result = numberOne + numberTwo;
-  } else {
-    result = numberOne * numberTwo;
+  switch (sign) {
+    case '-':
+      result = numberOne - numberTwo;
+      break;
+    case '+':
+      result = numberOne + numberTwo;
+      break;
+    case '*':
+      result = numberOne * numberTwo;
+      break;
+    default: result = 'Error: this operation is not supported';
   }
   return result;
 };
